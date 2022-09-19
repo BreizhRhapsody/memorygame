@@ -4,179 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Memory Game</title>
+    <title>Monster Memory Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Simple menu with time, moves and restart button -->
-    <div class="menu">
-      <p>
-        Time: <strong><span class="menu-timer">00:00</span></strong>
-      </p>
-      <p>
-        Moves: <strong><span class="menu-flips">0</span></strong>
-      </p>
-      <button class="menu-restart" onclick="location.reload(true);">
-        Restart
-      </button>
-    </div>
-    <!-- The board -->
-    <section class="memory-game">
-      <!-- Blue monster x2 -->
-      <div class="memory-card" data-framework="bluemonster">
-        <img src="img/bluemonster.png" alt="Blue monster" class="front-face" />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-      <div class="memory-card" data-framework="bluemonster">
-        <img src="img/bluemonster.png" alt="Blue monster" class="front-face" />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-
-      <!-- Green monster x2 -->
-      <div class="memory-card" data-framework="greenmonster">
+    <!-- Homepage with logo and creator's name -->
+    <section class="enter">
+      <div class="enter-body">
         <img
-          src="img/greenmonster.png"
-          alt="Green monster"
-          class="front-face"
+          src="img/homepage.png"
+          alt="Logo Monster Memory Game"
+          class="enter-img"
         />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-      <div class="memory-card" data-framework="greenmonster">
-        <img
-          src="img/greenmonster.png"
-          alt="Green monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-
-      <!-- Orange monster x2 -->
-      <div class="memory-card" data-framework="orangemonster">
-        <img
-          src="img/orangemonster.png"
-          alt="Orange monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-      <div class="memory-card" data-framework="orangemonster">
-        <img
-          src="img/orangemonster.png"
-          alt="Orange monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-
-      <!-- Pink monster x2 -->
-      <div class="memory-card" data-framework="pinkmonster">
-        <img src="img/pinkmonster.png" alt="Pink monster" class="front-face" />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-      <div class="memory-card" data-framework="pinkmonster">
-        <img src="img/pinkmonster.png" alt="Pink monster" class="front-face" />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-
-      <!-- Purple monster x2 -->
-      <div class="memory-card" data-framework="purplemonster">
-        <img
-          src="img/purplemonster.png"
-          alt="Purple monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-      <div class="memory-card" data-framework="purplemonster">
-        <img
-          src="img/purplemonster.png"
-          alt="Purple monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-
-      <!-- Red monster x2 -->
-      <div class="memory-card" data-framework="redmonster">
-        <img src="img/redmonster.png" alt="Red monster" class="front-face" />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-      <div class="memory-card" data-framework="redmonster">
-        <img src="img/redmonster.png" alt="Red monster" class="front-face" />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-
-      <!-- Red and flying monster x2 -->
-      <div class="memory-card" data-framework="redflymonster">
-        <img
-          src="img/redflymonster.png"
-          alt="Red and flying monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-      <div class="memory-card" data-framework="redflymonster">
-        <img
-          src="img/redflymonster.png"
-          alt="Red and flying monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-
-      <!-- Blue and purple monster x2 -->
-      <div class="memory-card" data-framework="bluepurplemonster">
-        <img
-          src="img/blueandpurplemonster.png"
-          alt="Blue and purple monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
-      </div>
-      <div class="memory-card" data-framework="bluepurplemonster">
-        <img
-          src="img/blueandpurplemonster.png"
-          alt="Blue and purple monster"
-          class="front-face"
-        />
-        <img src="img/memorygame.png" alt="Memory game" class="back-face" />
+        <p class="enter-welcome">Welcome to Monster Memory Game</p>
+        <p class="enter-infos">
+          Created by
+          <a href="https://manon-poucet.com/" target="_blank"
+            >Manon Poucet @breizhrhapsody</a
+          >
+        </p>
+        <p class="enter-infos">
+          <a
+            href="https://fr.freepik.com/vecteurs-libre/monstres-mignons-colores_1175561.htm#query=svg&position=36&from_view=search"
+            target="_blank"
+            >Monsters by brgfx</a
+          >
+          on Freepik
+        </p>
+        <button><a href="game.html">Start the game</a></button>
       </div>
     </section>
-
-    <!-- Modal for winner -->
-    <div id="win-modal" class="modal">
-      <div class="modal-content">
-        <p>Congratulations! You won!</p>
-        <p>
-          Time: <strong><span class="modal-timer">00:00</span></strong>
-        </p>
-        <p>
-          Moves: <strong><span class="modal-flips">0</span></strong>
-        </p>
-        <button class="play-again" onclick="location.reload(true);">
-          Play again
-        </button>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-      <p>
-        Created by
-        <a href="https://manon-poucet.com/" target="_blank"
-          >Manon Poucet @breizhrhapsody</a
-        >
-      </p>
-      <p>
-        <a
-          href="https://fr.freepik.com/vecteurs-libre/monstres-mignons-colores_1175561.htm#query=svg&position=36&from_view=search"
-          target="_blank"
-          >Monsters by brgfx</a
-        >
-        on Freepik
-      </p>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>
