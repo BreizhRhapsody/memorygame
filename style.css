@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #001427;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 32px;
+  background-color: #708d81;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  margin: 20px;
+}
+
+/* Menu */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.menu p {
+  padding-left: 15px;
+}
+
+/* Board */
+
+.memory-game {
+  width: 740px;
+  height: 740px;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  border-radius: 10px;
+}
+
+.memory-card {
+  width: 24.1%;
+  height: 24.1%;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  margin: 3px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.memory-card.shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+.memory-card.flashes {
+  animation-duration: 1s;
+  animation-name: flash;
+  transition: none;
+}
+
+/* Board animations */
+
+@keyframes flash {
+  0% {
+    box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
+  }
+  50% {
+    box-shadow: 1px 1px 6px 1px rgba(43, 255, 1, 0.459);
+  }
+  100% {
+    box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-13px);
+  }
+  40% {
+    transform: translateX(13px);
+  }
+  60% {
+    transform: translateX(-8px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+/* Homepage */
+
+.enter {
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.enter img {
+  width: 500px;
+}
+
+.enter-welcome {
+  padding-bottom: 10px;
+}
+
+.enter a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.enter-infos,
+.enter-infos a {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.enter-infos a {
+  text-transform: none;
+  text-decoration: underline;
+}
+
+/* Modal for winners */
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background-color: #708d81;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #001727;
+  border-radius: 10px;
+  width: 500px;
+  height: 160px;
+  text-align: center;
+}
+
+.modal-content button {
+  background-color: #001427;
+  margin-top: 20px;
+}
+
+.modal.show-modal {
+  display: block;
+}
+
+.modal.play-again {
+  display: none;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 30px;
+}
+
+.footer a {
+  color: aliceblue;
+}
