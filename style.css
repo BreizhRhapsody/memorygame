@@ -205,3 +205,68 @@ button {
 .footer a {
   color: aliceblue;
 }
+
+/* Game for desktop but adapt to mobile too */
+
+/* Mobile in portrait */
+
+@media screen and (max-width: 375px) {
+  .enter img {
+    width: 300px;
+  }
+  .memory-game {
+    width: 375px;
+    height: 812px;
+    justify-content: center;
+  }
+  .memory-card {
+    width: 35%;
+    height: 15%;
+  }
+
+  .footer {
+    padding-top: 240px;
+    padding-bottom: 50px;
+  }
+
+  .modal-content {
+    width: 270px;
+    height: 180px;
+  }
+}
+
+/* Mobile in landscape */
+
+@media screen and (max-width: 812px) {
+  .enter {
+    margin-top: 0;
+  }
+
+  .enter img {
+    width: 200px;
+  }
+
+  .memory-game {
+    width: 812px;
+    height: 375px;
+    justify-content: center;
+  }
+
+  .memory-card {
+    width: 15%;
+    height: 30%;
+  }
+
+  .footer {
+    padding-bottom: 50px;
+  }
+
+  .modal {
+    padding-top: 100px;
+  }
+
+  .modal-content {
+    width: 500px;
+    height: 160px;
+  }
+}
