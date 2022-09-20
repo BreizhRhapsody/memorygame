@@ -210,7 +210,10 @@ button {
 
 /* Mobile in portrait */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 600px) {
+  .enter {
+    margin-top: 100px;
+  }
   .enter img {
     width: 300px;
   }
@@ -237,7 +240,7 @@ button {
 
 /* Mobile in landscape */
 
-@media screen and (max-width: 812px) {
+@media screen and (min-width: 601px) and (max-width: 1000px) {
   .enter {
     margin-top: 0;
   }
