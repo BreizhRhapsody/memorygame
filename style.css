@@ -51,8 +51,11 @@ button {
   width: 24.1%;
   height: 24.1%;
   position: relative;
+  -webkit-transform: scale(1);
   transform: scale(1);
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   margin: 3px;
   background-color: white;
@@ -60,19 +63,26 @@ button {
 }
 
 .memory-card:active {
+  -webkit-transform: scale(0.97);
+  -webkit-transition: 0.2s;
   transform: scale(0.97);
   transition: 0.2s;
 }
 
 .memory-card.flip {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
 .memory-card.shake {
+  -webkit-animation: shake 0.35s ease-in-out;
   animation: shake 0.35s ease-in-out;
 }
 
 .memory-card.flashes {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: flash;
+  -webkit-transition: none;
   animation-duration: 1s;
   animation-name: flash;
   transition: none;
@@ -80,33 +90,80 @@ button {
 
 /* Board animations */
 
-@keyframes flash {
+@-webkit-keyframes flash {
   0% {
+    -webkit-box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
     box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
   }
   50% {
+    -webkit-box-shadow: 1px 1px 6px 1px rgba(43, 255, 1, 0.459);
     box-shadow: 1px 1px 6px 1px rgba(43, 255, 1, 0.459);
   }
   100% {
+    -webkit-box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
     box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
+  }
+}
+
+@keyframes flash {
+  0% {
+    -webkit-box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
+    box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
+  }
+  50% {
+    -webkit-box-shadow: 1px 1px 6px 1px rgba(43, 255, 1, 0.459);
+    box-shadow: 1px 1px 6px 1px rgba(43, 255, 1, 0.459);
+  }
+  100% {
+    -webkit-box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
+    box-shadow: 1px 1px 20px 1px rgb(44, 255, 1);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  20% {
+    -webkit-transform: translateX(-13px);
+    transform: translateX(-13px);
+  }
+  40% {
+    -webkit-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+  60% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
   }
 }
 
 @keyframes shake {
   0%,
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   20% {
+    -webkit-transform: translateX(-13px);
     transform: translateX(-13px);
   }
   40% {
+    -webkit-transform: translateX(13px);
     transform: translateX(13px);
   }
   60% {
+    -webkit-transform: translateX(-8px);
     transform: translateX(-8px);
   }
   80% {
+    -webkit-transform: translateX(8px);
     transform: translateX(8px);
   }
 }
