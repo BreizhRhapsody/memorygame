@@ -43,6 +43,7 @@ button {
   height: 740px;
   display: flex;
   flex-wrap: wrap;
+  -webkit-perspective: 1000px;
   perspective: 1000px;
   border-radius: 10px;
 }
